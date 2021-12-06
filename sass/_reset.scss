@@ -1,0 +1,18 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    font-family: 'Open Sans', sans-serif;
+    --f-size-title-mobile: 1.6rem;
+    --f-size-title-desktop: 2.3em;
+    --f-size-text: 1rem;
+    --f-size-button: .8rem;
+    --background-url: url(../images/bg-mobile.svg);
+    --f-size-icon: 13px;
+}   

@@ -1,0 +1,227 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: 'Open Sans', sans-serif;
+  --f-size-title-mobile: 1.6rem;
+  --f-size-title-desktop: 2.3em;
+  --f-size-text: 1rem;
+  --f-size-button: .8rem;
+  --background-url: url(../images/bg-mobile.svg);
+  --f-size-icon: 13px;
+}
+
+.hero {
+  width: 100%;
+  background-color: #674baf;
+  background-image: var(--background-url);
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 2em 10%;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+}
+
+.hero__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+}
+
+.hero__logo img {
+  width: 130px;
+}
+
+.hero__image {
+  margin-block: 4em;
+  width: 100%;
+}
+
+.hero__image img {
+  max-width: 100%;
+}
+
+.hero__title {
+  font-size: clamp(var(--f-size-title-mobile), 4vw, var(--f-size-title-desktop));
+  font-weight: 600;
+  color: white;
+}
+
+.hero__text {
+  line-height: 1.5;
+  color: white;
+  font-size: var(--f-size-text);
+}
+
+.hero__register {
+  display: block;
+  margin: 0 auto;
+  margin-top: .5em;
+  padding: .7em 2em;
+  width: 70%;
+  max-width: 300px;
+  background-color: white;
+  border-radius: 35px;
+  text-decoration: none;
+  color: #674baf;
+  font-size: var(--f-size-button);
+}
+
+.hero__register:hover {
+  background: #e882e8;
+  color: white;
+}
+
+.hero__social {
+  width: 120px;
+  margin: 0 auto;
+  margin-top: 4.5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
+.hero__social .icon {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__social .icon i {
+  font-size: var(--f-size-icon);
+  color: white;
+}
+
+.hero__social .icon .fa-instagram {
+  font-size: calc(var(--f-size-icon) + 3px);
+}
+
+.hero__social .icon:hover {
+  border-color: #e882e8;
+}
+
+.hero__social .icon:hover i {
+  color: #e882e8;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --background-url: url(../images/bg-desktop.svg);
+    --f-size-title-desktop: 2.7em;
+    --f-size-text: 1.19rem;
+    --f-size-button: 1.1rem;
+    --f-size-icon: 20px;
+  }
+  .hero {
+    height: 100vh;
+    padding: 3em 2em;
+  }
+}
+
+@media (min-width: 800px) and (min-height: 801px) {
+  .hero {
+    background-size: 100% 100%;
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1300px;
+    -ms-grid-columns: 1.3fr 1fr;
+        grid-template-columns: 1.3fr 1fr;
+    -ms-grid-rows: auto auto minmax(auto, 200px);
+        grid-template-rows: auto auto minmax(auto, 200px);
+        grid-template-areas: "header header" "image content" "social social";
+    place-content: flex-start;
+    place-items: center;
+    -webkit-column-gap: 4%;
+            column-gap: 4%;
+    height: 100%;
+  }
+  .hero__logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: header;
+  }
+  .hero__logo img {
+    width: 220px;
+  }
+  .hero__image {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: image;
+    margin-bottom: 0;
+    margin-top: 12%;
+  }
+  .hero__content {
+    text-align: left;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: content;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-top: 6em;
+  }
+  .hero__content .hero__text {
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  .hero__content .hero__register {
+    text-align: center;
+    margin-left: 0;
+    margin-right: auto;
+    width: 200px;
+    padding: .9em 2em;
+  }
+  .hero__social {
+    width: 100%;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: social / 2 / social / 3;
+    margin: 0;
+    place-content: flex-end;
+    place-items: flex-end;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    -webkit-column-gap: 1em;
+            column-gap: 1em;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .hero__social .icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
