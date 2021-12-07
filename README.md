@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
--  [Solution URL](https://github.com/AchrefFast/Frontend-Mentor--Base-Apparel-coming-soon-page)
-- [Live Site URL](https://achreffast.github.io/Frontend-Mentor--Base-Apparel-coming-soon-page)
+-  [Solution URL](https://github.com/AchrefFast/Frontend-Mentor--Huddle-landing-page-with-single-introductory-section-solution)
+- [Live Site URL](https://achreffast.github.io/Frontend-Mentor--Huddle-landing-page-with-single-introductory-section-solution)
 
 ## My process
 
