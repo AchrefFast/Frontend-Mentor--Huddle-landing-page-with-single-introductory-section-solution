@@ -23,6 +23,7 @@ body {
   background-color: #674baf;
   background-image: var(--background-url);
   background-repeat: no-repeat;
+  background-size: 100% auto;
   text-align: center;
   padding: 2em 10%;
 }
@@ -142,25 +143,15 @@ body {
     --f-size-icon: 20px;
   }
   .hero {
-    height: 100vh;
+    min-height: 800px;
     padding: 3em 2em;
+    background-size: auto 100%;
   }
-}
-
-@media (min-width: 800px) and (min-height: 801px) {
-  .hero {
-    background-size: 100% 100%;
-  }
-}
-
-@media (min-width: 800px) {
   .container {
     margin: 0 auto;
     max-width: 1300px;
     -ms-grid-columns: 1.3fr 1fr;
         grid-template-columns: 1.3fr 1fr;
-    -ms-grid-rows: auto auto minmax(auto, 200px);
-        grid-template-rows: auto auto minmax(auto, 200px);
         grid-template-areas: "header header" "image content" "social social";
     place-content: flex-start;
     place-items: center;
@@ -192,6 +183,7 @@ body {
     -ms-flex-item-align: start;
         align-self: flex-start;
     margin-top: 6em;
+    margin-bottom: 6em;
   }
   .hero__content .hero__text {
     line-height: 1.6;

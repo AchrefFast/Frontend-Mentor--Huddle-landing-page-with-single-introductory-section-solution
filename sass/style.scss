@@ -5,6 +5,7 @@
     background-color: color(pr-violet);
     background-image: var(--background-url);
     background-repeat: no-repeat;
+    background-size: 100% auto;
     text-align: center;
     padding: 2em 10%;
 }
@@ -112,28 +113,25 @@
         --f-size-text: 1.19rem;
         --f-size-button: 1.1rem;
         --f-size-icon: 20px;
+
     }
 
     .hero{
-        height: 100vh;
+        min-height: 800px;
         padding: 3em 2em;
-
-        @media (min-height: 801px){
-            background-size: 100% 100%;
-        }
-
+        background-size: auto 100%;
     }
 
     .container{
         margin: 0 auto;
         max-width: 1300px;
         grid-template-columns: 1.3fr 1fr;
-        grid-template-rows: auto auto minmax(auto, 200px);
         grid-template-areas: "header header" "image content" "social social";
         place-content: flex-start;
         place-items: center;
         column-gap: 4%;
         height: 100%;
+
     }
 
     .hero__logo{
@@ -155,6 +153,7 @@
         grid-area: content;
         align-self: flex-start;
         margin-top: 6em;
+        margin-bottom: 6em;
 
         .hero__text{
             line-height: 1.6;
